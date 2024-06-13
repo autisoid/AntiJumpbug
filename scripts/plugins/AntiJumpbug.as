@@ -101,7 +101,7 @@ void MapInit() {
     g_rgpfnWatchdogScheds.resize(0);
     g_rgpfnWatchdogScheds.resize(33);
     
-    for (uint idx = 1; idx <= g_Engine.maxClients; ++idx) {
+    for (int idx = 1; idx <= g_Engine.maxClients; ++idx) {
         @g_rgpfnWatchdogScheds[idx] = g_Scheduler.SetTimeout("Watchdog", 0.1f, idx);
     }
 }
